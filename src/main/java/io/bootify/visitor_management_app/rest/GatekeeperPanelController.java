@@ -51,7 +51,7 @@ public class GatekeeperPanelController {
     public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
         String response = "";
         try {
-            String uploadPath = "/tmp/images/testFile_" + System.currentTimeMillis() + "_" + file.getOriginalFilename();
+            String uploadPath = "E:\\PROGRAMS\\java programes\\visitor-photos\\" + System.currentTimeMillis() + "_" + file.getOriginalFilename();
             file.transferTo(new File(uploadPath));
             response = uploadPath;
         } catch (Exception ex){
